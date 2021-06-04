@@ -1,0 +1,735 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    line-height: 32px;
+}
+
+header {
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -21.213px 21.213px 30px 0 rgb(158 158 158 / 30%);
+    z-index: 1000;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header ul .main-menu {
+    display: flex;
+    align-items: center;
+}
+
+header ul .main-menu li a {
+    display: block;
+    position: relative;
+    transition: all 0.4s ease-in;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}   
+
+header ul .main-menu li a:hover {
+    color: #2b40ff;
+}
+
+header ul .main-menu li a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: calc(100% - 20px);
+    transform: translate(20px, 0);
+    transition: all 0.4s ease-in;
+}
+
+header ul .main-menu li a:hover::after {
+    border: 1px solid #2b40ff;
+    background-color: #2b40ff;
+    right: 40px;
+}
+
+.banner-area {
+    background-color: #f9f9ff;
+    padding: 171px 0 0;
+    margin: 0;
+}
+
+.banner-area .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 920px;
+}
+
+.banner-area .container > div{
+    margin: 0 20px;
+}
+
+.banner-area .container .intro-photo img {
+    display: block;
+    width: 300px;
+    height: 550px;
+}
+
+.banner-area .container .intro-to-my-self {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 540px;
+}
+
+.banner-area .container .intro-to-my-self h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.banner-area .container .intro-to-my-self h1 {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 45px;
+}
+
+.banner-area .container .intro-to-my-self p {
+    margin: 0 0 20px 0;
+    color: #777777;
+}
+
+ dv.discover,
+div.download {
+    display: inline-block;
+    margin: 0;
+} 
+
+div.discover a,
+div.download a {
+    display: inline-block;
+    position: relative;
+    background-color: #8490ff;
+    padding: 10px 20px;
+    color: #FFF;   
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+div.download a {
+    border-radius: 5px;
+    padding: 5px 10px;
+    letter-spacing: 1.2px;
+    margin-top: 10px;
+}
+
+div.discover a::after,
+div.download a::after {
+    content: "CLICK HERE";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    letter-spacing: 1px;
+    background-color: #2b40ff;
+    color: transparent;
+    transition: height 0.8s, color 0.6s 0.1s;
+}
+
+div.download a::after {
+    border-radius: 5px;
+}
+
+div.discover a:hover::after,
+div.download a:hover::after {
+    color: white;
+    height: 100%;
+}
+
+.about-me,
+.my-services,
+.portfolio,
+.contact {
+    margin: 0;
+}
+
+.about-me .intro-to-about-me,
+.my-services .intro-to-my-srvices,
+.portfolio .intro-to-my-portfolio,
+.contact .intro-to-contact {
+    margin:0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.about-me .intro-to-about-me h6,
+.my-services .intro-to-my-srvices h6,
+.portfolio .intro-to-my-portfolio h6,
+.contact .intro-to-contact h6 {
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: #2b40ff;
+    margin: 0 0 15px;
+    position: relative;
+    padding: 0;
+}
+
+.about-me .intro-to-about-me h6::after,
+.about-me .intro-to-about-me h6::before,
+.my-services .intro-to-my-srvices h6::after, 
+.my-services .intro-to-my-srvices h6::before,
+.portfolio .intro-to-my-portfolio h6::after, 
+.portfolio .intro-to-my-portfolio h6::before,
+.contact .intro-to-contact h6::after,
+.contact .intro-to-contact h6::before { 
+    content: "";
+    border: 0.7px solid #2b40ff;
+    background-color: #2b40ff;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+}
+
+.about-me .intro-to-about-me h6::after,
+.my-services .intro-to-my-srvices h6::after,
+.portfolio .intro-to-my-portfolio h6::after,
+.contact .intro-to-contact h6::after h6::after{
+    left: calc(106% - 3px);
+}
+
+.about-me .intro-to-about-me h6::before,
+.my-services .intro-to-my-srvices h6::before, 
+.portfolio .intro-to-my-portfolio h6::before,
+.contact .intro-to-contact h6::before {
+    right: 106%;
+}
+
+.my-services .intro-to-my-srvices h1,
+.portfolio .intro-to-my-portfolio h1,
+.contact .intro-to-contact h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin: 0 0 20px;
+}
+
+.my-services .intro-to-my-srvices p,
+.portfolio .intro-to-my-portfolio p {
+    letter-spacing: 1.5px;
+    width: 630px;
+    margin:0 0 45px;
+    color: #777;
+
+}
+
+.about-me .about,
+.my-services .actual-services,
+.portfolio .my-projects,
+.contact .to-contact-me {
+    width: 920px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-me .about {
+    margin-top: 45px;
+}
+
+.contact .to-contact-me {
+    margin: 45px auto;
+    flex-direction: row-reverse;
+}
+
+.about-me .about .not-important-info {
+    width: 366.4px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 278px;
+}
+
+.about-me .about .important-info {
+    width: calc(100% - 366.4px - 40px);
+}
+
+.about-me .about .not-important-info > div {
+    width: calc((50% - 10px));
+    margin: 10px 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 119px;
+}
+
+.about-me .about .not-important-info > div h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #2b40ff;
+}
+
+.about-me .about .not-important-info > div p {
+    margin: 15px 0 0;
+    letter-spacing: 3px;
+}
+
+.about-me .about .important-info  h6 {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.about-me .about .important-info  h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.about-me .about .important-info  h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin: 0 0 30px;
+    color: #777;
+}
+
+.about-me .about .important-info .my-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me .about .important-info .my-info div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.about-me .about .important-info .my-info div ul li {
+    padding: 5px 0;
+}
+
+.about-me .about .important-info .my-info div ul li span:first-child{
+    padding: 0  5px 0 0;
+    width: 110px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.about-me .about .important-info .my-info div ul li span{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    color: #2b40ff;
+    letter-spacing: 1.5px;
+}
+
+.my-services .actual-services > div {
+    width: calc((100% - 120px) / 3);
+    padding: 20px;
+    margin: 20px 0 35px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    transition: background-color 0.4s, color 0.3s;
+    position: relative;
+}
+
+.portfolio .my-projects > div {
+    width: calc((100% - 60px) / 3);
+    height: 300px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.portfolio .my-projects div > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.my-services .actual-services > div i::before {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #2b40ff;
+    border-radius: 50%;
+    color: #FFF;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    font-size: 30px;
+    transition: all 0.4s;
+} 
+
+.my-services .actual-services > div .fa.fa-mobile-phone::before {
+    font-size: 48px;
+}
+
+.my-services .actual-services > div h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0 10px;
+}
+
+.my-services .actual-services > div p {
+    color: #777;
+    margin: 0;
+}
+
+.my-services .actual-services > div:hover {
+    color: #FFF;
+    background-color: #2b40ff;
+}
+
+.my-services .actual-services > div:hover p {
+    color: #c9c9c9;
+}
+
+.my-services .actual-services > div:hover i::before {
+    background-color: #FFF;
+    color: #2b40ff;
+    top: 0;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .my-projects > div:hover {
+    transform: scale(0.93);
+    opacity: 0.7;
+}
+
+
+.contact .to-contact-me > div {
+    width: calc((100% - 90px) / 3);
+    height:  300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .to-contact-me > div .background {
+    background: linear-gradient(45deg,#2b40ff 0%,rgba(106,198,240,1) 100%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.contact .to-contact-me > div .background::after {
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: calc(100% - 12px);
+    height: calc(100% - 8px);
+    transition: background 0.5s;
+}
+
+.contact .to-contact-me > div .background i {
+    font-size: 25px;
+     color: white;
+     z-index: 4;
+     transition: color 0.5s;
+}
+
+.contact .to-contact-me > div:hover .background::after {
+    background-color: #FFF;
+}
+
+.contact .to-contact-me > div:hover .background i {
+    color: #2b40ff;
+}
+
+.contact .to-contact-me > div h3 {
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.to-home a { 
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #000;
+    visibility: hidden;
+    transition: color 0.2s;
+}
+
+.to-home a:hover {
+    color: #2b40ff;
+}
+
+
+@media screen and (max-width: 920px) {
+    header ul .main-menu li a {
+        padding: 0 10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    header ul .main-menu li a::after {
+        transform: translate(10px, 0);
+    }
+
+    header ul .main-menu li a:hover::after {
+        right: 20px;
+    }
+    
+    .banner-area .container, 
+    .about-me .about,
+    .my-services .actual-services,
+    .portfolio .my-projects,
+    .contact  .to-contact-me {
+        width: 660px;
+    }
+
+    .banner-area .container div {
+        margin: 0 14px;
+    }
+
+    .banner-area .container .intro-photo img {
+        width: 260px;
+        height: 480px
+    }
+    .banner-area .container .intro-to-my-self {
+        width: 348px;
+    }
+
+    .banner-area .container .intro-to-my-self h1{
+        font-size: 28px;
+    }
+
+    .my-services .actual-services > div,
+    .contact .to-contact-me > div {
+        width: calc((100% - 120px) / 2);
+    }
+
+    .portfolio  .my-projects > div {
+        width: calc((100% - 40px) / 2);
+    }
+
+    .my-services  .intro-to-my-srvices h6,
+    .portfolio .intro-to-my-portfolio h6 ,
+    .contact .intro-to-contact h6{
+        letter-spacing: 2px;
+    }
+
+    .my-services .intro-to-my-srvices h1,
+    .portfolio .intro-to-my-portfolio h1,
+    .contact .intro-to-contact h1 {
+        font-size: 35px;
+    }
+
+    .my-services .intro-to-my-srvices p,
+    .portfolio .intro-to-my-portfolio p {
+        width: 530px;
+    }
+
+    .my-info {
+        flex-direction: column;
+    } 
+
+    .my-info > div {
+        width: 100%;
+    }
+    
+    .about-me .about .important-info  h1 {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    header {
+        position: static;
+        width: calc(100% - 60px);
+        z-index: 1000;
+        margin: 0 auto;
+        box-shadow: none;
+        padding: 10px 0;
+    }
+
+    header ul,
+    header ul .main-menu {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header ul .main-menu {
+        align-items: right;
+        justify-content: left;
+    }
+
+    header ul .main-menu li a {
+        padding: 0;
+    }
+
+
+    header ul li {
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    header ul li a {
+        font-size: 25px;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+
+    header ul .main-menu li a:hover::after {
+        width: 0;
+        border: none;
+    }
+    
+    .banner-area .container {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .banner-area .container div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .banner-area .container .intro-to-my-self {
+       margin: 0;
+    }
+
+    .banner-area .container .intro-photo {
+        margin-top: 50px;
+    }
+
+    .banner-area .container .intro-photo img{
+        margin: 0 auto;
+    }
+
+    .about-me .about,
+    .my-services .actual-services,
+    .portfolio .my-projects,
+    .contact .to-contact-me {
+        width: 100%;
+    }
+
+    .my-services .actual-services > div {
+        width: calc(100% - 80px);
+    }
+
+    .portfolio .my-projects > div {
+        width: calc(100% - 120px);
+        height: auto;
+    }
+
+    .contact .to-contact-me > div {
+        width: calc(100% - 120px);
+    }
+
+    .about-me .intro-to-about-me h6::after,
+    .about-me .intro-to-about-me h6::before,
+    .my-services  .intro-to-my-srvices h6::before,
+    .my-services  .intro-to-my-srvices h6::after,
+    .portfolio .intro-to-my-portfolio h6::before, 
+    .portfolio .intro-to-my-portfolio h6::after,
+    .contact .intro-to-contact h6::before,
+    .contact .intro-to-contact h6::after {
+        width: 45px;
+    }
+
+    .my-services .intro-to-my-srvices h1
+     {
+        font-size: 30px;
+    }
+
+    .portfolio .intro-to-my-portfolio h1,
+    .contact .intro-to-contact h1 {
+        font-size: 28px;
+    }
+    
+    .portfolio .intro-to-my-portfolio p {
+        width: auto;
+    }
+
+    .my-services .intro-to-my-srvices p {
+        width: auto;
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    .about-me .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me .about .not-important-info {
+        width: calc(100% - 100px);
+        height: auto;
+        justify-content: center;
+    }
+
+    .about-me .about .important-info {
+        margin-top: 50px;
+        width: calc(100% - 100px);
+    }    
+
+    .about-me .about .not-important-info > div {
+        width: 100%;
+    }
+
+    .to-home a {
+        visibility: visible;
+    }
+}
